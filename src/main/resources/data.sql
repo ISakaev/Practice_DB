@@ -10,17 +10,23 @@ VALUES (1, 0, 'Первый офис', 'л. Ленина, 15', 84951111111, 1, '
 INSERT INTO Office (id, version, name, full_name,  address, phone, org_id, is_active)
 VALUES (2, 0, 'Второй офис', 'л. Мира, 35', 84952222222, 2, 'TRUE');
 
-INSERT INTO Employee (id, version, first_name, last_name, middle_name, possition, phone, doc_code, doc_number, doc_date, citizenship_code, office_id, is_identified)
-VALUES (1, 0, 'Петр', 'Иванов', 'Николаевич', 'Разработчик', 89992225533, 23, 8020355665, '2020-01-01', 643, 1, 'FALSE');
+INSERT INTO Employee (id, version, first_name, last_name, middle_name, possition, phone, doc_id, citizenship_code, office_id, is_identified)
+VALUES (1, 0, 'Петр', 'Иванов', 'Николаевич', 'Разработчик', 89992225533, 1, 643, 1, 'FALSE');
 
-INSERT INTO Employee (id, version, first_name, last_name, middle_name, possition, phone, doc_code, doc_number, doc_date, citizenship_code, office_id, is_identified)
-VALUES (1, 0, 'Иван', 'Петров', 'Александрович', 'Стажер', 89993336677, 23, 8020556677, '2020-02-02', 643, 2, 'FALSE');
+INSERT INTO Employee (id, version, first_name, last_name, middle_name, possition, phone, doc_id, citizenship_code, office_id, is_identified)
+VALUES (2, 0, 'Иван', 'Петров', 'Александрович', 'Стажер', 89993336677, 2, 643, 2, 'FALSE');
 
-INSERT INTO Doc (code, version, name) VALUES (91, 0, 'Иные документы  ');
+INSERT INTO Doc (id, version, documentation_code, number, date, user_id)
+VALUES (1, 0, 23, "8020355665", '2020-01-01', 1);
 
-INSERT INTO Doc (code, version, name) VALUES (23, 0, 'Паспорт гражданина Российской Федерации');
+INSERT INTO Doc (id, version, documentation_code, number, date, user_id)
+VALUES (2, 0, 10, "8020556677", '2020-02-02', 2);
 
-INSERT INTO Doc (code, version, name) VALUES (10, 0, 'Паспорт иностранного гражданина');
+INSERT INTO Documentation (code, version, name) VALUES (91, 0, 'Иные документы  ');
+
+INSERT INTO Documentation (code, version, name) VALUES (23, 0, 'Паспорт гражданина Российской Федерации');
+
+INSERT INTO Documentation (code, version, name) VALUES (10, 0, 'Паспорт иностранного гражданина');
 
 INSERT INTO Country (code, version, name) VALUES (643, 0, 'Российская Федерация');
 
