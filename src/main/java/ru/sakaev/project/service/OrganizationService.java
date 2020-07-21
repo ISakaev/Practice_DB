@@ -1,14 +1,10 @@
-package ru.sakaev.project.dao.organization;
+package ru.sakaev.project.service;
 
 import ru.sakaev.project.model.Organization;
 
 import java.util.List;
 
-/**
- * DAO для работы с Organization
- */
-public interface OrganizationDao {
-
+public interface OrganizationService {
     /**
      * Получить объекты Organization
      */
@@ -28,5 +24,4 @@ public interface OrganizationDao {
      * Сохранить Organization
      */
     void save(Organization organization);
-
 }
